@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Změna barvy pozadí</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.11.3/brython.min.js"></script>
+</head>
+<body onload="brython()">
+    <h1 style="text-align: center;">Klikni na tlačítko a změní se barva!</h1>
+    <button id="tlacitko" style="display: block; margin: auto; padding: 10px 20px;">Změnit barvu</button>
+    
+    <script type="text/python">
+        from browser import document
+        from javascript import Math  # Použijeme JavaScript namísto Brython `random`
+
+        def zmena_barvy(event):
+            barvy = ["red", "blue", "green", "yellow", "purple", "orange", "pink"]
+            document.body.style.backgroundColor = barvy[int(Math.random() * len(barvy))]  # JavaScriptové generování náhodného čísla
+
+        document["tlacitko"].bind("click", zmena_barvy)
+    </script>
+</body>
+</html>
