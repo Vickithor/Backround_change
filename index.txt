@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Změna barvy pozadí</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.11.3/brython.min.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/brython-dev/brython/master/www/src/brython.js"></script>
 </head>
 <body onload="brython()">
     <h1 style="text-align: center;">Klikni na tlačítko a změní se barva!</h1>
