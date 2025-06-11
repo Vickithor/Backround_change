@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/brython-dev/brython/master/www/src/brython.js"></script>
+</head>
+<body onload="brython()">
+    <input id="num1" type="number" placeholder="Číslo 1">
+    <input id="num2" type="number" placeholder="Číslo 2">
+    <button id="calculate">Spočítat</button>
+    <p id="result"></p>
+
+    <script type="text/python">
+        from browser import document
+        
+        def calculate(event):
+            num1 = int(document["num1"].value)
+            num2 = int(document["num2"].value)
+            document["result"].text = f"Výsledek: {num1 + num2}"
+        
+        document["calculate"].bind("click", calculate)
+    </script>
+</body>
+</html>
